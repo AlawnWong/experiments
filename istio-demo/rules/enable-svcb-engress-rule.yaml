@@ -4,7 +4,7 @@ metadata:
   name: enable-svcb-engress-rule
 spec:
   destination:
-    service: 10.100.35.27
+    service: 192.168.137.102
   ports:
     - port: 9997
       protocol: http

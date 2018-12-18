@@ -8,12 +8,12 @@ spec:
     metadata:
       labels:
         app: svca
-        version: v0.1
+        version: v1
     spec:
       containers:
       - name: svca
-        image: docker.io/bigwhite/istio-demo-svca:v0.1
-        imagePullPolicy: Always
+        image: bigwhite/istio-demo-svca:v0.1
+        imagePullPolicy: Never
 ---
 apiVersion: v1
 kind: Service

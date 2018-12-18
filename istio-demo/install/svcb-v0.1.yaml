@@ -3,18 +3,19 @@ kind: Deployment
 metadata:
   name: svcb
 spec:
-  replicas: 2
+  replicas: 1
   template:
     metadata:
       labels:
         app: svcb
-        version: v0.1
+        version: v1
     spec:
       containers:
       - name: svcb
-        command: ["/root/svcb/svcb", "-msgsvc", "10.100.35.27:9997"]
-        image: docker.io/bigwhite/istio-demo-svcb:v0.1
-        imagePullPolicy: Always
+        command: ["/root/svcb/svcb", "-msgsvc", "192.168.137.102:9997"]
+        image: bigwhite/istio-demo-svcb:v0.1
+        imagePullPolicy: Never
+        
 
 ---
 apiVersion: v1
