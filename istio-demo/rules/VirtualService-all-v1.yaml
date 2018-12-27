@@ -1,0 +1,26 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: svca
+spec:
+  hosts:
+  - svca
+  http:
+  - route:
+    - destination:
+        host: svca
+        subset: v1
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: svcb
+spec:
+  hosts:
+  - svcb
+  http:
+  - route:
+    - destination:
+        host: svcb
+        subset: v1
+
