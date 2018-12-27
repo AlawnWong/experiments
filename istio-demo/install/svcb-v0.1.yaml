@@ -1,7 +1,7 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: svcb
+  name: svcb-v1
 spec:
   replicas: 1
   template:
