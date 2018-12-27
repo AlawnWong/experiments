@@ -5,7 +5,7 @@ metadata:
 spec:
   hosts:
     - svcb
-  http:
+  tcp:
   - route:
     - destination:
         host: svcb
